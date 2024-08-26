@@ -1,0 +1,11 @@
+$font-path: '../assets/fonts';
+
+@font-face {
+  font-family: 'roadstoreregular';
+  src: url('../assets/fonts/roadstore_dafont-webfont.woff2') format('woff2'),
+    url('../assets/fonts/roadstore_dafont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$roadstoreregular-font: 'roadstoreregular', sans-serif;

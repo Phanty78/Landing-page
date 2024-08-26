@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "roadstoreregular";
+  src: url("../assets/fonts/roadstore_dafont-webfont.woff2") format("woff2"), url("../assets/fonts/roadstore_dafont-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #25283b;
+  display: flex;
+  flex-direction: column;
+}
+html body header {
+  background-color: #6baeb6;
+  height: 60px;
+  z-index: 2;
+}
+html body header .nav-links {
+  list-style: none;
+  padding: 18px 18px 0 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
+}
+html body header .nav-links li {
+  margin-left: 20px;
+}
+html body header .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+}
+html body header .nav-links a:hover {
+  color: #cbbb9b;
+  transition: color ease 0.5s;
+}
+html body header .burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  padding: 24px 0 0 24px;
+}
+html body header .burger .line {
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+}
+html body header .burger .line:hover {
+  color: #cbbb9b;
+  transition: color ease 0.5s;
+}
+@media screen and (max-width: 768px) {
+  html body header .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #6baeb6;
+  }
+  html body header .burger {
+    display: flex;
+  }
+  html body header .nav-active {
+    display: flex;
+  }
+}
+html body #hero {
+  background-image: url("../assets/hero-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+html body #hero button {
+  background-color: #a14e39;
+  border: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 48px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  font-family: "roadstoreregular", sans-serif;
+  width: 80%;
+  padding: 32px 0;
+}
+@media screen and (min-width: 768px) {
+  html body #hero button {
+    width: auto;
+    padding: 32px 64px;
+  }
+}
+html body #hero button:hover {
+  background-color: #cbbb9b;
+  color: #25283b;
+  transform: translate(-50%, -25%);
+  transition: transform ease 0.5s;
+}
+html body #game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #6baeb6;
+  gap: 24px;
+}
+html body #game h1 {
+  font-family: "roadstoreregular", sans-serif;
+  font-size: 48px;
+  color: #a14e39;
+  margin: 0;
+  text-align: center;
+}
+html body #game p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+html body #team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 0 24px 0;
+}
+html body #team h2 {
+  font-family: "roadstoreregular", sans-serif;
+  font-size: 48px;
+  color: #cbbb9b;
+  margin: 0;
+}
+html body #team .team__members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  html body #team .team__members {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+html body #team .team__members article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 32px;
+  background-color: #6baeb6;
+  border-radius: 12px;
+  width: 80%;
+}
+@media screen and (min-width: 992px) {
+  html body #team .team__members article {
+    max-width: 35%;
+    height: 267px;
+  }
+}
+html body #team .team__members article .top-container,
+html body #team .team__members article .bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+}
+html body #team .team__members article .top-container h3,
+html body #team .team__members article .bottom-container h3 {
+  font-family: "roadstoreregular", sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin: 0;
+}
+html body #team .team__members article .top-container img,
+html body #team .team__members article .bottom-container img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #cbbb9b;
+}
+html body #team .team__members article .top-container .team__quote,
+html body #team .team__members article .bottom-container .team__quote {
+  font-size: 20px;
+  color: #fff;
+  font-style: italic;
+}
+html body #team .team__members article .top-container .socials-container,
+html body #team .team__members article .bottom-container .socials-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+html body #team .team__members article .top-container .socials-container img,
+html body #team .team__members article .bottom-container .socials-container img {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 0%;
+  cursor: pointer;
+}
+html body #team .team__members article .team__description {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+html body #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 0 24px 0;
+  background-color: #6baeb6;
+}
+html body #contact h2 {
+  font-family: "roadstoreregular", sans-serif;
+  font-size: 48px;
+  color: #a14e39;
+  margin: 0;
+}
+html body #contact form label {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 8px;
+  position: relative;
+}
+html body #contact form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 16px;
+  background-color: #cbbb9b;
+  border: 2px solid #25283b;
+}
+html body #contact form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 16px;
+  background-color: #cbbb9b;
+  border: 2px solid #25283b;
+}
+html body #contact form button {
+  margin-top: 24px;
+  background-color: #a14e39;
+  border: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: "roadstoreregular", sans-serif;
+  width: 80%;
+  padding: 18px 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+@media screen and (min-width: 768px) {
+  html body #contact form button {
+    width: 50%;
+    padding: 24px 24px;
+  }
+}
+html body #contact form button:hover {
+  background-color: #cbbb9b;
+  color: #25283b;
+  transform: translate(-50%, -25%);
+  transition: transform ease 0.5s;
+}
+html body footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cbbb9b;
+  font-size: 18px;
+  padding: 12px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  html body footer {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
