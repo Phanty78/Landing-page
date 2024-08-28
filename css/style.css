@@ -75,7 +75,7 @@ html body header .burger .line:hover {
   }
 }
 html body #hero {
-  background-image: url("../assets/hero-background.webp");
+  background-image: url("../assets/images/hero-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,9 +129,62 @@ html body #game h1 {
   margin: 0;
   text-align: center;
 }
-html body #game p {
+html body #game .game__content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  html body #game .game__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 24px;
+    grid-template-areas: "game__first game__second" "game__fourth game__third " "game__fifth game__sixth";
+  }
+  html body #game .game__content .game__first {
+    grid-area: game__first;
+  }
+  html body #game .game__content .game__second {
+    grid-area: game__second;
+  }
+  html body #game .game__content .game__third {
+    grid-area: game__third;
+  }
+  html body #game .game__content .game__fourth {
+    grid-area: game__fourth;
+  }
+  html body #game .game__content .game__fifth {
+    grid-area: game__fifth;
+  }
+  html body #game .game__content .game__sixth {
+    grid-area: game__sixth;
+  }
+}
+html body #game .game__content .game__image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 0;
+  border: solid 2px #cbbb9b;
+}
+@media screen and (min-width: 768px) {
+  html body #game .game__content .game__image {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body #game .game__content .game__image {
+    max-width: 700px;
+  }
+}
+html body #game .game__content p {
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 26px;
   text-align: center;
 }
@@ -235,6 +288,7 @@ html body #contact {
   gap: 32px;
   padding: 24px 0 24px 0;
   background-color: #6baeb6;
+  width: 100%;
 }
 html body #contact h2 {
   font-family: "roadstoreregular", sans-serif;

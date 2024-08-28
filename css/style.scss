@@ -83,7 +83,7 @@ html {
     }
 
     #hero {
-      background-image: url('../assets/hero-background.webp');
+      background-image: url('../assets/images/hero-background.webp');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -140,11 +140,72 @@ html {
         text-align: center;
       }
 
-      p {
-        color: $white;
-        font-size: 22px;
-        line-height: 26px;
-        text-align: center;
+      .game__content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+        @media screen and (min-width: $breakpoint-md) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-gap: 24px;
+          grid-template-areas:
+            'game__first game__second'
+            'game__fourth game__third '
+            'game__fifth game__sixth';
+
+          .game__first {
+            grid-area: game__first;
+          }
+
+          .game__second {
+            grid-area: game__second;
+          }
+
+          .game__third {
+            grid-area: game__third;
+          }
+
+          .game__fourth {
+            grid-area: game__fourth;
+          }
+
+          .game__fifth {
+            grid-area: game__fifth;
+          }
+
+          .game__sixth {
+            grid-area: game__sixth;
+          }
+        }
+
+        .game__image {
+          width: 100%;
+          max-width: 100%;
+          border-radius: 12px;
+          margin: 0;
+          border: solid 2px $beige;
+
+          @media screen and (min-width: $breakpoint-md) {
+            max-width: 600px;
+          }
+
+          @media screen and (min-width: $breakpoint-lg) {
+            max-width: 700px;
+          }
+        }
+
+        p {
+          color: $white;
+          font-size: 20px;
+          line-height: 26px;
+          text-align: center;
+        }
       }
     }
 
@@ -252,6 +313,7 @@ html {
       gap: 32px;
       padding: 24px 0 24px 0;
       background-color: $opal;
+      width: 100%;
 
       h2 {
         font-family: $roadstoreregular-font;
